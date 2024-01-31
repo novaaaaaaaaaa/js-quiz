@@ -5,6 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        
+        document.addEventListener(onload, () => {
+            let question_num = ({{ques_num}});
+            let user_score = ({{score}})
+
+            if (question_num > 10) {
+                alert(`Your score: ${user_score}`);
+                window.location.href = "{% url 'quiz_main:leaderboard' %}";
+            }
+        })
+
+    </script>
+
     <title>Document</title>
 </head>
 <body>
@@ -13,7 +28,7 @@
 
         <div class="question_container">
 
-            <h1 id="question"></h1>
+            <h1 id="question">{{next_question}}</h1>
 
             <form action="" method="post">
 
