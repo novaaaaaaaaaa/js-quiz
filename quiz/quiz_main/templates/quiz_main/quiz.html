@@ -6,19 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script>
-        
-        document.addEventListener(onload, () => {
-            let question_num = ({{ques_num}});
-            let user_score = ({{score}})
-
-            if (question_num > 10) {
-                alert(`Your score: ${user_score}`);
-                window.location.href = "{% url 'quiz_main:leaderboard' %}";
-            }
-        })
-
-    </script>
+    <link rel="stylesheet" href="{% static 'css/main_styles.css' %}">
 
     <title>Document</title>
 </head>
@@ -26,9 +14,11 @@
 
     <div class="main_container">
 
-        <div class="question_container">
+        <div class="container">
 
-            <h1 id="question">{{next_question}}</h1>
+            <h1 id="question_num">Question {{ques_num}}</h1>
+
+            <h3 id="question">{{next_question}}</h3>
 
             <form action="" method="post">
 
@@ -36,7 +26,7 @@
 
                 <input type="text" name="answer_box" id="answer_box">
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick="check_if_finish()">
 
             </form>
 
