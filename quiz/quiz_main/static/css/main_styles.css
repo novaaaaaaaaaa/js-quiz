@@ -1,0 +1,27 @@
+/* Set the height of the HTML element to 100% */
+html {
+    height: 100%;
+  }
+  
+  /* Define the main_container class */
+  .main_container {
+    /* Use flexbox to center the container both vertically and horizontally */
+    display: flex;
+    width: 100%; /* Take up the full width of the viewport */
+    height: 1190px; /* Set a fixed height */
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    background-color: #000070; /* Set the background color to a shade of blue */
+  }
+  
+  /* Define the container class */
+  .container {
+    /* Use flexbox to center the contents of the container both vertically and horizontally */
+    display: flex;
+    flex-direction: column; /* Stack the child elements vertically */
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+    padding: 60px; /* Add some padding around the edges */
+    border-radius: 25px; /* Round the corners of the container */
+    background-color: #ffffff; /* Set the background color to white */
+  }

@@ -1,0 +1,29 @@
+/* Table styling */
+table {
+    /* Add padding around the table */
+ padding: 10px;
+}
+
+/* Styling for table header and data cells */
+th, td {
+    /* Add padding to the cells */
+    padding: 10px;
+
+    /* Set a fixed width for the cells */
+    width: 250px;
+
+    /* Add a border around the cells */
+    border: 1px solid #000000;
+}
+
+/* Styling for table header cells */
+th {
+    /* Set a background color for the header cells */
+    background-color: #9393ff;
+}
+
+/* Styling for every odd row in the table */
+tr:nth-child(odd) {
+    /* Set a background color for the odd rows */
+    background-color: #b4b4ff;
+}
