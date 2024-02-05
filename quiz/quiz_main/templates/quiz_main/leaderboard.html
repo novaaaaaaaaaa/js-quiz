@@ -35,9 +35,21 @@
                 
             </table>
 
+            <br><br>
+
+            <button onclick="redirect()">Go back to home</button>
+
         </div>
 
     </div>
     
+    <script>
+
+        function redirect() {
+            window.location.href = "{% url 'quiz_main:landing' %}"
+        }
+
+    </script>
+
 </body>
 </html>
